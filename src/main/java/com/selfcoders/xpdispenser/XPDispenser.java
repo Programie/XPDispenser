@@ -79,6 +79,10 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             xp = totalExp;
         }
 
+        if (xp <= 0) {
+            return;
+        }
+
         player.giveExp(-xp);
 
         ExperienceOrb orb = player.getWorld().spawn(player.getLocation(), ExperienceOrb.class);
