@@ -112,11 +112,11 @@ public final class XPDispenser extends JavaPlugin implements Listener {
     private int getExpAtLevel(final int level) {
         if (level <= 15) {
             return (2 * level) + 7;
-        }
-        if ((level >= 16) && (level <= 30)) {
+        } else if (level <= 30) {
             return (5 * level) - 38;
+        } else {
+            return (9 * level) - 158;
         }
-        return (9 * level) - 158;
     }
 
     private int getTotalExperience(final Player player) {
