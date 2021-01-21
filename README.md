@@ -2,6 +2,8 @@
 
 A Minecraft Bukkit plugin to throw your XP at yourself (e.g. to repair your mending tools).
 
+![](screenshot.jpg)
+
 [![pipeline status](https://gitlab.com/Programie/XPDispenser/badges/master/pipeline.svg)](https://gitlab.com/Programie/XPDispenser/commits/master)
 [![download latest release](https://img.shields.io/badge/download-latest-blue.svg)](https://gitlab.com/Programie/XPDispenser/-/jobs/artifacts/master/raw/target/XPDispenser.jar?job=release)
 
