@@ -5,3 +5,7 @@ author: Programie
 website: ${project.url}
 api-version: 1.14
 main: com.selfcoders.xpdispenser.XPDispenser
+permissions:
+  xpdispenser:
+    description: 'Allow usage of this plugin'
+    default: true

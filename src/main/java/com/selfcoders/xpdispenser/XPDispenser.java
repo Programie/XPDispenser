@@ -39,6 +39,14 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
+        Player player = event.getPlayer();
+
+        if (!player.hasPermission("xpdispenser")) {
+            player.sendMessage(ChatColor.RED + "You do not have the required permissions to place XPDispenser signs!");
+            event.getBlock().breakNaturally();
+            return;
+        }
+
         event.setLine(1, ChatColor.BLUE + SIGN_LINE);
     }
 
@@ -64,6 +72,13 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
+        Player player = event.getPlayer();
+
+        if (!player.hasPermission("xpdispenser")) {
+            player.sendMessage(ChatColor.RED + "You do not have the required permissions to use XPDispenser signs!");
+            return;
+        }
+
         int xp = 0;
         try {
             xp = Integer.parseInt(ChatColor.stripColor(signBlock.getLine(SIGN_LINE_INDEX_XP)));
@@ -73,8 +88,6 @@ public final class XPDispenser extends JavaPlugin implements Listener {
         if (xp <= 0) {
             xp = 10;
         }
-
-        Player player = event.getPlayer();
 
         int totalExp = getTotalExperience(player);
         if (totalExp < xp) {

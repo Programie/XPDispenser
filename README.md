@@ -17,7 +17,7 @@ You can get the latest release from [GitLab](https://gitlab.com/Programie/XPDisp
 
 ## Permissions
 
-Currently, there are no permissions to be set.
+Currently, there is only one permission available: `xpdispenser` (Default: everyone)
 
 ## How to use it?
 
