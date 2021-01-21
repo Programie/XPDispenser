@@ -47,7 +47,7 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
-        event.setLine(1, ChatColor.BLUE + SIGN_LINE);
+        event.setLine(SIGN_LINE_INDEX, ChatColor.BLUE + SIGN_LINE);
     }
 
     @EventHandler
