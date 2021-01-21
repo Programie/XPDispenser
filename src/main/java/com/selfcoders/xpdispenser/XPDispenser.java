@@ -17,6 +17,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class XPDispenser extends JavaPlugin implements Listener {
+    final int SIGN_LINE_INDEX = 0;
+    final int SIGN_LINE_INDEX_XP = 1;
     final String SIGN_LINE = "[XPDispenser]";
 
     public void onEnable() {
@@ -27,7 +29,7 @@ public final class XPDispenser extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onSignChange(SignChangeEvent event) {
-        String line = event.getLine(1);
+        String line = event.getLine(SIGN_LINE_INDEX);
 
         if (line == null) {
             return;
@@ -58,13 +60,13 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
-        if (!ChatColor.stripColor(signBlock.getLine(1)).equalsIgnoreCase(SIGN_LINE)) {
+        if (!ChatColor.stripColor(signBlock.getLine(SIGN_LINE_INDEX)).equalsIgnoreCase(SIGN_LINE)) {
             return;
         }
 
         int xp = 0;
         try {
-            xp = Integer.parseInt(ChatColor.stripColor(signBlock.getLine(2)));
+            xp = Integer.parseInt(ChatColor.stripColor(signBlock.getLine(SIGN_LINE_INDEX_XP)));
         } catch (Exception ignored) {
         }
 
