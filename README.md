@@ -5,17 +5,14 @@ A Minecraft Bukkit plugin to throw your XP at yourself (e.g. to repair your mend
 ![](screenshot.jpg)
 
 [![pipeline status](https://gitlab.com/Programie/XPDispenser/badges/master/pipeline.svg)](https://gitlab.com/Programie/XPDispenser/commits/master)
-[![download latest release](https://img.shields.io/badge/download-latest-blue.svg)](https://gitlab.com/Programie/XPDispenser/-/jobs/artifacts/master/raw/target/XPDispenser.jar?job=release)
+[![download from GitLab](https://img.shields.io/badge/download-Releases-blue?logo=gitlab)](https://gitlab.com/Programie/XPDispenser/-/releases)
+[![download from CurseForge](https://img.shields.io/badge/download-CurseForge-blue?logo=curseforge)](https://www.curseforge.com/minecraft/bukkit-plugins/xpdispenser)
 
 ## What is it?
 
 XPDispenser allows you to throw XP orbs at yourself by using your currently collected XP points.
 
 The collected XP points can be used to repair tools and armor enchanted with the mending enchantment. In that way, you are able to reuse your already collected XP points to repair your tools and armor.
-
-## Installation
-
-You can get the latest release from [GitLab](https://gitlab.com/Programie/XPDispenser/pipelines?scope=tags).
 
 ## Permissions
 
