@@ -6,6 +6,7 @@ A Minecraft Bukkit plugin to throw your XP at yourself (e.g. to repair your mend
 
 [![pipeline status](https://gitlab.com/Programie/XPDispenser/badges/master/pipeline.svg)](https://gitlab.com/Programie/XPDispenser/commits/master)
 [![download from GitLab](https://img.shields.io/badge/download-Releases-blue?logo=gitlab)](https://gitlab.com/Programie/XPDispenser/-/releases)
+[![download from Modrinth](https://img.shields.io/badge/download-Modrinth-blue?logo=modrinth)](https://modrinth.com/mod/xpdispenser)
 [![download from CurseForge](https://img.shields.io/badge/download-CurseForge-blue?logo=curseforge)](https://www.curseforge.com/minecraft/bukkit-plugins/xpdispenser)
 
 ## What is it?
