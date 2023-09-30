@@ -15,10 +15,10 @@
 
   <name>XPDispenser</name>
   <description>Throw your XP at yourself (e.g. to repair your mending tools)</description>
-  <url>https://gitlab.com/Programie/XPDispenser</url>
+  <url>https://github.com/Programie/XPDispenser</url>
 
   <scm>
-    <developerConnection>scm:git:ssh://git@gitlab.com/Programie/XPDispenser.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com/Programie/XPDispenser.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
