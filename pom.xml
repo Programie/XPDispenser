@@ -10,7 +10,7 @@
 
   <groupId>com.selfcoders</groupId>
   <artifactId>xpdispenser</artifactId>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
 
   <name>XPDispenser</name>
@@ -28,8 +28,8 @@
 
   <repositories>
     <repository>
-      <id>common-repo</id>
-      <url>https://gitlab.com/api/v4/projects/Programie%2FCommon/packages/maven</url>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/Programie/Common</url>
     </repository>
   </repositories>
 </project>

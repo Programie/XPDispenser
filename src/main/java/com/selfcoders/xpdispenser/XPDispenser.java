@@ -98,10 +98,10 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
-        player.giveExp(-xp);
+        int realXP = xp;
 
-        ExperienceOrb orb = player.getWorld().spawn(player.getLocation(), ExperienceOrb.class);
-        orb.setExperience(xp);
+        player.giveExp(-realXP);
+        player.getWorld().spawn(player.getLocation(), ExperienceOrb.class, experienceOrb -> experienceOrb.setExperience(realXP));
     }
 
     private Sign getSignFromBlock(Block block) {
