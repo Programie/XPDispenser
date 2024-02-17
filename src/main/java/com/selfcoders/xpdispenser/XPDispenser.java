@@ -1,11 +1,10 @@
 package com.selfcoders.xpdispenser;
 
+import com.selfcoders.bukkitlibrary.Experience;
+import com.selfcoders.bukkitlibrary.SignUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockState;
 import org.bukkit.block.Sign;
-import org.bukkit.block.data.BlockData;
-import org.bukkit.block.data.type.WallSign;
 import org.bukkit.entity.ExperienceOrb;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -62,7 +61,7 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             return;
         }
 
-        Sign signBlock = getSignFromBlock(block);
+        Sign signBlock = SignUtils.getSignFromBlock(block);
 
         if (signBlock == null) {
             return;
@@ -92,7 +91,7 @@ public final class XPDispenser extends JavaPlugin implements Listener {
             xp = 10;
         }
 
-        int totalExp = getTotalExperience(player);
+        int totalExp = Experience.getExp(player);
         if (totalExp < xp) {
             xp = totalExp;
         }
@@ -105,49 +104,5 @@ public final class XPDispenser extends JavaPlugin implements Listener {
 
         player.giveExp(-realXP);
         player.getWorld().spawn(player.getLocation(), ExperienceOrb.class, experienceOrb -> experienceOrb.setExperience(realXP));
-    }
-
-    private Sign getSignFromBlock(Block block) {
-        BlockData blockData = block.getBlockData();
-
-        if (!(blockData instanceof WallSign) && !(blockData instanceof org.bukkit.block.data.type.Sign)) {
-            return null;
-        }
-
-        BlockState blockState = block.getState();
-
-        if (!(blockState instanceof Sign)) {
-            return null;
-        }
-
-        return (Sign) blockState;
-    }
-
-    private int getExpAtLevel(final Player player) {
-        return getExpAtLevel(player.getLevel());
-    }
-
-    private int getExpAtLevel(final int level) {
-        if (level <= 15) {
-            return (2 * level) + 7;
-        } else if (level <= 30) {
-            return (5 * level) - 38;
-        } else {
-            return (9 * level) - 158;
-        }
-    }
-
-    private int getTotalExperience(final Player player) {
-        int exp = Math.round(getExpAtLevel(player) * player.getExp());
-        int currentLevel = player.getLevel();
-
-        while (currentLevel > 0) {
-            currentLevel--;
-            exp += getExpAtLevel(currentLevel);
-        }
-        if (exp < 0) {
-            exp = Integer.MAX_VALUE;
-        }
-        return exp;
     }
 }
